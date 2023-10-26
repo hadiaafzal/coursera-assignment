@@ -1,45 +1,60 @@
 <!doctype html>
 <html>
 <style>
-
-*{
-  box-sizing: border-box;
-}
-.row {
+    *
+    .container {
   display: flex;
+  flex-wrap: wrap;
 }
 .box {
-    text-align: center;
-  width: 32%;
-  flex: 1;
-  background: gray;
-  height: 150px;
-  margin-right: 20px; /* You can change it to increase/decrease the space between boxes */
-}
-.box:last-child {
-  margin-right: auto;
-  
+  width: 33.33%;
 
 }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+.box {
+    width:50%;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+  .box {
+    width: 100%;
+  }
+}
+.box {
+  margin:auto;
+padding: 10px;
+  box-sizing: border-box;
+  border:2px solid black
+  background-color: gray;
+  overflow: auto; 
+}
+
+
 h1 {
-    text-align: center;
+    text: center;
     padding: 20px;
     color :darkblue;
 }
 h4 {
     margin: 0px;
-    padding: 5px;
+    padding: 5px 5px 5px 5px;
     border: 1px solid black;
-    border-top: 1px;
+    border-top: 1px  1px 1px;
     position: absolute;
     top: 0px;
     right: 0px;
+    background-color: #ff0062;
+    
 }
 p {
 
     color: whitesmoke;
 
-    padding: 5px 4px 5px 2px;
+    padding: 5px 15% 5px 2px;
+    
 }
 .backgroud-1 {
     background-color: #0081ff;
@@ -55,30 +70,28 @@ p {
     height: 250px;
     background-color: gray;
     border: 2px solid black;
-    margin:10px;
+    margin-bottom:10px;
     position: relative;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+ /* @media screen and (min-width: 768px) and (max-width: 991px) {
+      }
+
+  @media screen and (max-width: 767px) {
+  }*/
+
 </style>
 <head>
+   <!--- <link rel="stylesheet" href="style.css">--> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Module 2 solution </title>
-    <!-- Bootstrap min css-->
-    <!--<link rel="stylesheet" href="css/bootstrap.min.css">
-
-    custom css -->
-    <!--<link rel="stylesheet" href="css/style.css"> -->
 </head>
 <body>
-<div class="container">
-
-
     <h1> Our Menu </h1>
-
-    <div class="row">
-        <div class="col-xs-6">
+<div class="container">
+    <div class="box">
             <div class="p-section">
                 <h4 class="backgroud-1">
                     Chicken
@@ -95,8 +108,8 @@ p {
             </div>
 
         </div>
-
-        <div class="col-xs-6">
+        <div class="box">
+    
             <div class="p-section">
                 <h4 class="backgroud-2">
                     Beef
@@ -109,8 +122,7 @@ p {
                 </p>
             </div>
         </div>
-
-        <div class="col-xs-6">
+        <div class="box">
             <div class="p-section">
                 <h4 class="backgroud-3">
                     Sushi
@@ -124,7 +136,6 @@ p {
             </div>
         </div>
     </div>
-</div>
 </body>
 </html>
 
